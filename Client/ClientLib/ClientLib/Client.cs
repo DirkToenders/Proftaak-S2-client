@@ -73,6 +73,7 @@ namespace Client
                 receiveThread = null;
             }
             client = new TcpClient();
+            
             client.Connect(serverIP, serverPort);
             writer = new StreamWriter(client.GetStream());
             reader = new StreamReader(client.GetStream());
